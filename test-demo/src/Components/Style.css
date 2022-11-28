@@ -1,0 +1,6 @@
+.leftRightWrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+.leftRightWrap .rightPart ul{list-style:none;display:flex;align-items:center;margin:0;padding:0;}
+.leftRightWrap .rightPart ul a{text-decoration:none;font-size:20px;color: #b2b2b2;}
+.leftRightWrap .rightPart ul a:hover{color: #4d8db4;}
+.leftRightWrap .rightPart ul li{margin-right:16px;}
+.leftRightWrap .rightPart ul li:last-child{margin-right:0;}
