@@ -1,17 +1,25 @@
 import React from 'react'
+import right_side_arrow from '../assest/images/right-side-arrow.png';
+import banner_image from '../assest/images/home-banner.jpg';
+import { Link } from "react-router-dom";
 
 export default function Home() {
-  const banner = {
-      color: "white",
-      backgroundColor: "#4d8db4",
-      padding: "10px",
-      fontFamily: "Arial"
+
+  const banner_part = {    
+    backgroundImage: `url(${banner_image})`,
   }
   return (
-    <section className='homePage text-center' style={banner}>
+    <>   
+
+    <div className="homeHeroSection" style={banner_part}>
       <div className="container">
-        <h1 className='my-0'>Home</h1>
+          <div className="firstSmallText">we are</div>
+          <h1 className="heroMainTitle">Pledge <br/>Financial</h1>
+          <Link className="btn" to="/contact">Contact us             
+            <img src={right_side_arrow} alt="Logo" />           
+          </Link>
       </div>
-    </section>
+    </div>
+  </>
   )
 }

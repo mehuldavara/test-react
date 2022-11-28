@@ -1,17 +1,23 @@
-import React from 'react'
+import React from 'react';
+import right_side_arrow from '../assest/images/right-side-arrow.png';
+import banner_image from '../assest/images/about.jpeg';
+import { Link } from "react-router-dom";
 
 export default function About() {
-  const banner = {
-    color: "white",
-    backgroundColor: "#4d8db4",
-    padding: "10px",
-    fontFamily: "Arial"
+const banner_part = {    
+  backgroundImage: `url(${banner_image})`,
 }
   return (
-    <section className='aboutPage text-center' style={banner}>
+    <>
+    <div className="homeHeroSection" style={banner_part}>
       <div className="container">
-        <h1 className='my-0'>About us</h1>
+          <div className="firstSmallText">we are</div>
+          <h1 className="heroMainTitle">About <br/>Us</h1>
+          <Link className="btn" to="/contact">Contact us             
+            <img src={right_side_arrow} alt="Logo" />           
+          </Link>
       </div>
-    </section>
+    </div>
+    </>
   )
 }
