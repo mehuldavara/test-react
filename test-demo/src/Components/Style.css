@@ -44,3 +44,19 @@ img{max-width: 100%;height: auto;vertical-align: top;}
 /* .siteFooter{margin-top:40px;} */
 .siteFooter .firstfooter{padding:37px 0;}
 .siteFooter .secondFooter p {margin-bottom: 0;}
+
+/* Contact page */
+.formInputValue{text-align:center;display:flex;align-items:center;justify-content:center;width: 50%;margin: 0 auto;}
+.formInputValue input{height:40px;border:1px solid #283444;border-radius:5px 0 0 5px;max-width:320px;width:100%;outline: none;padding: 0 15px;font-size: 14px;background-color: transparent;}
+.formInputValue button{height:40px;border:1px solid #283444;padding:0 30px;border-radius:0 5px 5px 0;line-height:1;max-width:120px;width:100%;text-align:center;background-color:#283444;color:#fff;transition:.5s all;outline: none;}
+.formInputValue button:hover{background-color:transparent;color:#283444;}
+.contactForm {background-color: #f5f5f5;}
+.dataList{display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between;width:50%;margin: 10px auto 0;}
+.dataList:first-child {margin-top: 30px;}
+.inputText{width:calc(100% - 240px);border:1px solid #283444;padding:12px 10px;border-right: none;font-size: 14px;}
+.dataList .buttonwrap{display:flex;align-items:center;flex-wrap:wrap;width:240px;}
+.dataList .buttonwrap button{height:40px;border:1px solid #283444;padding:0 30px;line-height:1;max-width:120px;width:100%;text-align:center;background-color:#283444;color:#fff;transition:.5s all;outline:none;font-size: 14px;}
+.dataList .buttonwrap .edit{background-color:transparent;color:#283444;}
+.dataList .buttonwrap button.delete{border-radius:0 5px 5px 0;}
+.dataList .buttonwrap .edit:hover{background-color:#283444;color:#fff;}
+.dataList .buttonwrap button.delete:hover{background-color:transparent;color:#283444;}

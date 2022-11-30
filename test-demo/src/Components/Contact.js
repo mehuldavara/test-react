@@ -10,6 +10,8 @@ const banner_part = {
 
 const [name,setName]=useState("")
 const [allData,setAllData]=useState([])
+const [show,setshow]=useState(false)
+const [editIndex,setEditIndex]=useState()
 
 const handleAdd=()=>{
   if(name.length!==0){
@@ -23,6 +25,19 @@ const handleDelete=(index)=>{
   setAllData([...allData])
 }
 
+const handleEdit=(i)=>{
+  setName(allData[i])
+  setshow(true)
+  setEditIndex(i)
+}
+
+const handleUpdate=()=>{
+  allData.splice(editIndex,1,name)
+  setAllData([...allData])
+  setshow(false)
+  setName("")
+}
+
   return (
     <>
     <div className="homeHeroSection" style={banner_part}>
@@ -34,19 +49,29 @@ const handleDelete=(index)=>{
           </Link>
       </div>
     </div>
-    <div className='contactForm'>
-      <div className="container">        
-          <input value={name} onChange={(e)=>setName(e.target.value)}/>
-          <button onClick={handleAdd}>Add</button>   
-          {
-            allData.map((val,i)=>
-            <div>
-              <h1>{val}</h1>
-              <button className='edit'>Edit</button>
-              <button className='delete' onClick={()=>handleDelete(i)}>Delete</button>
-            </div>
-            )            
-          }     
+
+    <div className='contactForm py-5'>
+      <div className="container">
+
+          <div className='formInputValue'>
+            <input value={name} onChange={(e)=>setName(e.target.value)}/>
+            {!show?<button className='addbtn bttn' onClick={handleAdd}>Add</button>:
+            <button className='update bttn' onClick={handleUpdate}>Update</button>}
+          </div>
+
+          <div className='dataListWrap'>
+            {
+              allData.map((val,i)=>
+              <div className='dataList' key={i}>
+                <div className='inputText'>{val}</div>
+                <div className='buttonwrap'>
+                  <button className='edit' onClick={()=>handleEdit(i)}>Edit</button>
+                  <button className='delete' onClick={()=>handleDelete(i)}>Delete</button>
+                </div>
+              </div>
+              )            
+            }
+          </div>
         </div>
     </div>
     </>
