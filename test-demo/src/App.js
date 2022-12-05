@@ -4,10 +4,15 @@ import Footer from './Components/Footer';
 
 
 function App() {
+  function Cat(props) {
+    return <h1>Meow's color is {props.color}</h1>;
+  }
   return (
     <>
       <Header />
-      <Footer />     
+      <Footer />
+      <Cat color="purple" />
+      
     </>
   );
 }
