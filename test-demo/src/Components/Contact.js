@@ -55,7 +55,7 @@ const handleUpdate=()=>{
 
           <div className='formInputValue'>
             <input value={name} onChange={(e)=>setName(e.target.value)}/>
-            {!show?<button className='addbtn bttn' onClick={handleAdd}>Add</button>:
+            {!show ? <button className='addbtn bttn' onClick={handleAdd}>Add</button>:
             <button className='update bttn' onClick={handleUpdate}>Update</button>}
           </div>
 
@@ -69,11 +69,14 @@ const handleUpdate=()=>{
                   <button className='delete' onClick={()=>handleDelete(i)}>Delete</button>
                 </div>
               </div>
+              
               )            
-            }
+            }            
           </div>
         </div>
     </div>
+    
     </>
+    
   )
 }
