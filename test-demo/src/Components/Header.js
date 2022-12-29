@@ -1,10 +1,10 @@
 import React from 'react';
 import logo from '../assest/images/white-logo.png';
-import { Route, Routes, Link } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { Route, Routes, Link, NavLink } from "react-router-dom";
 import Home from './Home';
 import About from './About';
 import Contact from './Contact';
+
 import './Style.css';
 
 export default function Header() {
@@ -22,7 +22,7 @@ export default function Header() {
                         <ul>                            
                             <li><NavLink to="/">Home</NavLink></li>
                             <li><NavLink to="/about">About Us</NavLink></li>
-                            <li><NavLink to="/contact">Contact Us</NavLink></li>
+                            <li><NavLink to="/contact">Contact Us</NavLink></li>                            
                         </ul>                    
                     </div>
                 </div>
@@ -32,7 +32,7 @@ export default function Header() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/contact" element={<Contact />} />            
         </Routes>
     </>
     );

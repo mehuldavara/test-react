@@ -29,35 +29,36 @@ const banner_part = {
 
   return (
     <>
-    <div className="homeHeroSection" style={banner_part}>
-      <div className="container">
-          <div className="firstSmallText">we are</div>
-          <h1 className="heroMainTitle">About <br/>Us</h1>
-          <Link className="btn" to="/contact">Contact us             
-            <img src={right_side_arrow} alt="Logo" />           
-          </Link>
+    
+      <div className="homeHeroSection" style={banner_part}>
+        <div className="container">
+            <div className="firstSmallText">we are</div>
+            <h1 className="heroMainTitle">About <br/>Us</h1>
+            <Link className="btn" to="/contact">Contact us             
+              <img src={right_side_arrow} alt="Logo" />           
+            </Link>
+        </div>
       </div>
-    </div>
 
-    <div className="selectPart py-5">
-      <div className="container">
-        <h2>Yoy have select <span style={numberColor}>{num}</span> value</h2>
-        <h2>Yoy have select <span style={numberColor}>{name}</span> value</h2>
-        <h2>Yoy have select <span style={numberColor}>{moves}</span> value</h2>
-        <select 
-            value={num} 
-            onChange={(e) =>{
-              setNum(e.target.value);
-            }}
-          >
-          <option value="1">1</option>
-          <option value="25">25</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
+      <div className="selectPart py-5">
+        <div className="container">
+          <h2>You have select <span style={numberColor}>{num}</span> value</h2>
+          <h2>You have select <span style={numberColor}>{name}</span> value</h2>
+          <h2>You have select <span style={numberColor}>{moves}</span> value</h2>
+          <select 
+              value={num} 
+              onChange={(e) =>{
+                setNum(e.target.value);
+              }}
+            >
+            <option value="1">1</option>
+            <option value="50">50</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
       </div>
-    </div>
       
     </>
   )
